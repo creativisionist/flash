@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-  def signin
-  end
-
   def new
   end
 
@@ -10,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       flash[:notice] = "Welcome man"
       session[:id] = user.id
-      redirect_to messages_path
+      redirect_to user_cards_path(user)
     else
       flash[:error] = "Error please try again"
       render :new

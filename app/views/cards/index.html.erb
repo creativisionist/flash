@@ -1,0 +1,6 @@
+
+<h1><%= current_user.name %>'s Cards</h1>
+
+<%- @cards.each do |card| %>
+  <%= link_to card.front, user_card_path(card.user, card) %>
+<% end %>

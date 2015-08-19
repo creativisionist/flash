@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'sessions#signin'
+  root 'sessions#welcome'
   get  '/signin'    => "sessions#new"
   post '/signin'    => "sessions#create"
   get  '/signout'   => "sessions#destroy"
