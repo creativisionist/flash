@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create] do 
     resources :cards
+      get 'cards/:id' => "cards#show_back"
   end
 
   # Example of regular route:
